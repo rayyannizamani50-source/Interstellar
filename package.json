@@ -16,7 +16,7 @@
     "precommit": "pnpm run format && pnpm biome check --write .",
     "lint": "biome lint --write ."
   },
-  "author": "InterstellarNetwork",
+  "author": "Heartwood contributors",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@mercuryworkshop/bare-mux": "^2.1.9",
