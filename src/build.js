@@ -987,7 +987,8 @@ function routeRewriteTable(routes) {
     [`"tabs"`, `"${routes["/tabs"]}"`],
   ];
 }
-const ROUTE_REWRITE_COUNT = 16;
+// One application route literal was removed with the Apps navigation link.
+const ROUTE_REWRITE_COUNT = 15;
 
 function applyRouteRewrites(source, table) {
   let count = 0;
