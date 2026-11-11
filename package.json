@@ -1,11 +1,11 @@
 {
-  "name": "interstellar",
+  "name": "heartwood",
   "version": "6.3.0",
   "type": "module",
   "engines": {
-  "node": ">=22.23.4 <23",
-  "npm": ">=10.0.0"
-},
+    "node": ">=22.23.4 <23",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "start": "node src/server.js",
     "build": "node src/build.js",
@@ -51,5 +51,6 @@
     "patchedDependencies": {
       "@mercuryworkshop/bare-mux@2.1.9": "patches/@mercuryworkshop__bare-mux@2.1.9.patch"
     }
-  }
+  },
+  "description": "Heartwood web portal and proxy"
 }
