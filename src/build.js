@@ -818,9 +818,9 @@ const INLINE_HANDLER_FUNCS = {
 const INLINE_HANDLER_ATTR = /(\son(?:keyup|change|click)\s*=\s*")([A-Za-z_$][\w$]*)(\s*\()/gi;
 // window.bar/category (2) + tabs.js funcs (9) + settings.js funcs (6) + search openUrl (1) + launcher openUrl (1).
 const INLINE_HANDLER_JS_COUNT = 19;
-// onkeyup/onchange (6) + onclick: tabs (7) + settings (2) + 404 openUrl (1).
-// openAboutBlank stays in settings.js but no longer has an inline caller in HTML.
-const INLINE_HANDLER_HTML_COUNT = 16;
+// The upstream HTML currently contains 15 recognized inline-handler attributes.
+// Keep the exact-count guard so future upstream changes are still detected.
+const INLINE_HANDLER_HTML_COUNT = 15;
 
 function createHandlerRenames() {
   const names = [...new Set([...Object.values(INLINE_HANDLER_WINDOW).flat(), ...Object.values(INLINE_HANDLER_FUNCS).flat()])];
