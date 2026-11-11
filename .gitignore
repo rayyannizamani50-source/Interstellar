@@ -11,4 +11,5 @@ analysis/
 .DS_Store
 .hintrc
 .gitpod.yml 
-*.env
+*.env.prisma-composer/
+.alchemy/
