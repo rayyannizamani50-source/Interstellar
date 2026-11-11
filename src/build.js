@@ -988,7 +988,8 @@ function routeRewriteTable(routes) {
   ];
 }
 // One application route literal was removed with the Apps navigation link.
-const ROUTE_REWRITE_COUNT = 15;
+// Navigation route reference removed with the Games link.
+const ROUTE_REWRITE_COUNT = 14;
 
 function applyRouteRewrites(source, table) {
   let count = 0;
