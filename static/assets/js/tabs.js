@@ -61,10 +61,10 @@ const addressBar = (() => {
   let addressEditing = false;
 
   const INTERNAL_PAGES = {
-    home: { route: "/home", title: "New Tab", displayUrl: "interstellar://newtab" },
-    apps: { route: "/apps", title: "Apps", displayUrl: "interstellar://apps" },
-    games: { route: "/games", title: "Games", displayUrl: "interstellar://games" },
-    settings: { route: "/settings", title: "Settings", displayUrl: "interstellar://settings" },
+    home: { route: "/home", title: "New Tab", displayUrl: "heartwood://newtab" },
+    apps: { route: "/apps", title: "Apps", displayUrl: "heartwood://apps" },
+    games: { route: "/games", title: "Games", displayUrl: "heartwood://games" },
+    settings: { route: "/settings", title: "Settings", displayUrl: "heartwood://settings" },
   };
 
   function internalPageForUrl(href) {
@@ -393,7 +393,7 @@ window.addEventListener("load", () => {
 
   window.addEventListener("message", event => {
     const data = event.data;
-    if (event.origin !== location.origin || !data || data.type !== "interstellar:tabs-navigate") return;
+    if (event.origin !== location.origin || !data || data.type !== "heartwood:tabs-navigate") return;
     const frame = Array.from(document.querySelectorAll("#frame-container iframe")).find(f => f.contentWindow === event.source);
     if (!frame || !addressBar.stripZeroWidth(String(data.value ?? "")).trim()) return;
     navigateFrame(frame, toTargetUrl(data.value));
