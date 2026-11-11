@@ -873,7 +873,7 @@ function importSaveData() {
           }
         }
         alert("Your save data has been imported. Please test it out.");
-        alert("If you find any issues then report it in GitHub or the Interstellar Discord.");
+        alert("If you find any issues, please report them in the Heartwood GitHub repository.");
       } catch (error) {
         console.error("Error parsing JSON file:", error);
       }
