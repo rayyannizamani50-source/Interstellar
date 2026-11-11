@@ -312,8 +312,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (nav) {
     const html = `
-      <div id="icon-container"><a class="heartwood-brand" href="/home" aria-label="Heartwood home"><span class="heartwood-mark" aria-hidden="true">✦</span><span>HEARTWOOD</span></a></div>
-      <div class="nav-bar-right"><a class="navbar-link" href="/./games"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a><a class="navbar-link" href="/./apps"><i class="fa-solid fa-grid-2 navbar-icon"></i>Apps</a><a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a></div>`;
+      <div id="icon-container"><a class="heartwood-brand" href="/home" aria-label="TBRNsandwich home"><span class="heartwood-mark" aria-hidden="true">✦</span><span>TBRNsandwich</span></a></div>
+      <div class="nav-bar-right"><a class="navbar-link" href="/./games"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a><a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>Settings</a></div>`;
     nav.innerHTML = html;
   }
 
