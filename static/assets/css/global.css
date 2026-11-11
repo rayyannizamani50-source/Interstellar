@@ -584,3 +584,72 @@ body.red-circle-cursor *:hover {
    border: none;
    background: transparent;
 }
+
+
+/* Heartwood visual system */
+:root {
+  --background: #0b110e !important;
+  --surface: #121c16 !important;
+  --surface-card: #142019 !important;
+  --surface-tile: #17251c !important;
+  --surface-raised: #203329 !important;
+  --surface-overlay: #18271e !important;
+  --surface-input: #101a14 !important;
+  --surface-button: #203329 !important;
+  --surface-button-hover: #2b4435 !important;
+  --surface-hover: #203329 !important;
+  --surface-active: #294333 !important;
+  --surface-nav: rgba(13, 23, 17, .82) !important;
+  --surface-nav-active: rgba(182, 227, 197, .12) !important;
+  --border: rgba(182, 227, 197, .12) !important;
+  --border-subtle: rgba(182, 227, 197, .07) !important;
+  --border-strong: rgba(182, 227, 197, .28) !important;
+  --text: #edf6ef !important;
+  --text-muted: #a5b8aa !important;
+  --text-faint: #748879 !important;
+  --accent: #b6e3c5 !important;
+  --accent-hover: #d0f1d9 !important;
+  --accent-text: #0b1710 !important;
+  --success: #9ed8ad !important;
+  --radius-sm: 9px !important;
+  --radius-md: 14px !important;
+  --radius-lg: 20px !important;
+  --transition: .22s cubic-bezier(.2,.7,.2,1) !important;
+  --transition-slow: .38s cubic-bezier(.2,.7,.2,1) !important;
+  color-scheme: dark;
+}
+html { min-height: 100%; background: #0b110e; }
+body { min-height: 100vh; color: var(--text); background: radial-gradient(ellipse at 50% -20%, rgba(73,128,91,.19), transparent 52%), linear-gradient(145deg,#0b110e 0%,#101a14 55%,#0b110e 100%) !important; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+body::after { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.16; background-image:radial-gradient(rgba(182,227,197,.18) .7px,transparent .7px); background-size:26px 26px; mask-image:linear-gradient(to bottom,black,transparent 80%); }
+.nav-bar { display:flex !important; align-items:center !important; justify-content:space-between !important; min-height:72px !important; height:72px !important; max-width:1440px; margin:14px auto !important; padding:0 26px !important; border:1px solid var(--border) !important; border-radius:18px !important; background:rgba(12,22,16,.86) !important; box-shadow:0 16px 48px rgba(0,0,0,.28) !important; }
+.nav-bar #icon-container { position:static !important; }
+.nav-bar .heartwood-brand { display:inline-flex; align-items:center; gap:12px; color:#edf6ef; text-decoration:none; font-size:19px; font-weight:800; letter-spacing:2.8px; }
+.heartwood-mark { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; background:linear-gradient(145deg,#c7efd2,#75b58a); color:#102117; font-size:21px; box-shadow:0 5px 22px rgba(129,198,150,.2); }
+.nav-bar-right { position:static !important; transform:none !important; display:flex; align-items:center; gap:8px; }
+.nav-bar-right .navbar-link { display:inline-flex; align-items:center; gap:9px; margin:0 !important; padding:11px 15px; border:1px solid transparent; border-radius:12px; color:#b5c7ba !important; font-size:12px !important; font-weight:700 !important; letter-spacing:1.15px; transition:all .22s ease; }
+.nav-bar-right .navbar-link:hover { color:#e8f7ec !important; background:rgba(182,227,197,.09); border-color:var(--border); transform:translateY(-2px) !important; font-size:12px !important; }
+.navbar-icon { color:#a9d9b7; font-size:14px; }
+.main { width:min(100% - 36px, 900px) !important; margin:0 auto; padding-top:clamp(145px,23vh,220px); position:relative !important; }
+.title { margin:0 0 16px !important; color:#edf6ef !important; font-size:clamp(48px,8vw,88px) !important; font-weight:800 !important; letter-spacing:-4px; line-height:1 !important; text-transform:none !important; text-shadow:0 10px 50px rgba(122,194,143,.14) !important; animation:hw-rise .8s both; }
+#splash { margin:0 0 34px !important; color:#9fb4a5 !important; font-size:15px; letter-spacing:.25px; animation:hw-rise .9s .08s both; }
+.search-container { width:100%; }
+#search-form { width:min(100%,680px); }
+#input, .input-container input, input, select { box-sizing:border-box; border:1px solid rgba(182,227,197,.15) !important; border-radius:14px !important; background:rgba(16,27,20,.92) !important; color:#edf6ef !important; box-shadow:0 12px 38px rgba(0,0,0,.18); }
+#input { width:100% !important; height:64px !important; padding:0 24px !important; text-align:left !important; font-size:16px !important; }
+input:focus, select:focus { border-color:rgba(182,227,197,.55) !important; box-shadow:0 0 0 4px rgba(147,207,165,.1) !important; }
+.input-container { margin:126px auto 28px !important; width:min(100% - 36px,1100px); gap:12px !important; }
+.input-container input { width:min(520px,100%) !important; height:52px; text-align:left !important; font-size:15px !important; }
+.input-container select { height:52px; padding:0 18px !important; font-size:14px !important; }
+#apps-container { width:min(100% - 36px,1200px); margin:28px auto 70px; }
+.apps,.pinned { gap:18px !important; justify-content:flex-start !important; margin-top:18px !important; }
+.column { width:156px !important; box-sizing:border-box; padding:10px !important; border:1px solid rgba(182,227,197,.09); border-radius:16px !important; background:linear-gradient(155deg,rgba(29,48,36,.96),rgba(17,29,21,.96)) !important; box-shadow:0 8px 25px rgba(0,0,0,.14); overflow:hidden; }
+.column img { position:static !important; display:block; width:100% !important; height:132px !important; object-fit:cover; border-radius:10px !important; padding:0 !important; }
+.column p { width:100% !important; height:auto !important; min-height:38px; padding:10px 2px 2px !important; margin:0; color:#e6f1e9 !important; font-size:13px !important; line-height:1.35 !important; font-weight:700 !important; text-shadow:none !important; }
+.column:hover { transform:translateY(-6px) !important; border-color:rgba(182,227,197,.28); box-shadow:0 18px 35px rgba(0,0,0,.3) !important; }
+.column button { background:#203b2b !important; border:1px solid rgba(182,227,197,.18) !important; }
+button { border-radius:12px; transition:transform .2s ease,background .2s ease,border-color .2s ease; }
+button:hover { transform:translateY(-1px); }
+a { transition:color .2s ease; }
+@keyframes hw-rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:700px) { .nav-bar { margin:8px !important; padding:0 13px !important; min-height:62px !important; height:62px !important; } .nav-bar .heartwood-brand { font-size:15px; letter-spacing:1.8px; } .heartwood-mark { width:32px;height:32px; } .nav-bar-right { gap:1px; } .nav-bar-right .navbar-link { padding:10px 8px !important; font-size:11px !important; } .nav-bar-right .navbar-link:hover { font-size:11px !important; } .nav-bar-right .navbar-link .navbar-icon { margin:0; } .main { padding-top:190px; } .title { letter-spacing:-2px; } .input-container { margin-top:105px !important; } .column { width:calc(50% - 10px) !important; max-width:170px; } .column img { height:120px !important; } .apps,.pinned { justify-content:center !important; gap:12px !important; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
